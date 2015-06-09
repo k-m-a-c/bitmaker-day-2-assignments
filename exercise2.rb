@@ -15,15 +15,15 @@ intro_message =
 puts intro_message
 
 # Get the cost of the meal and calculate the tip and total meal cost, then print it
-initial_cost_of_meal = gets.chomp.to_i
+pre_tip_cost_of_meal = gets.chomp.to_i
 
-tip = initial_cost_of_meal * 0.20
+tip = pre_tip_cost_of_meal * 0.20
 
-total_cost_of_meal = initial_cost_of_meal + tip 
+post_tip_cost_of_meal = pre_tip_cost_of_meal + tip 
 
 response_message =
-	"\nOk, so, if your meal cost #{'$' + initial_cost_of_meal.to_s} then you should leave a tip of #{'$' + tip.to_s}.\n
-	Which means that, in total, you should be paying #{'$' + total_cost_of_meal.to_s}."
+	"\nOk, so, if your meal cost #{'$' + pre_tip_cost_of_meal.to_s} then you should leave a tip of #{'$' + tip.to_s}.\n
+	Which means that, in total, you should be paying #{'$' + post_tip_cost_of_meal.to_s}."
 
 puts response_message
 puts ""
